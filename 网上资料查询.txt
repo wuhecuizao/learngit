@@ -1,0 +1,97 @@
+1、如何给Tomcat设置内存大小，更改其固有运行内存
+如果把tomcat作为插件引入到eclipse中去的。如果是用server的方式，参考如下：
+
+在eclipse中设置，设置步骤如下：
+
+1.点击eclipse上的debug图标旁边的下拉箭头（这里是eclipse中Tomcat主配置文件general information 下open launch configuration）
+
+2.然后选择Run Configurations,
+
+3.系统弹出设置tomcat配置页面，在Argument中末尾添加参数中的VM arguments中追加：
+
+-Xms256M -Xmx512M -XX:PermSize=256m -XX:MaxPermSize=512m
+
+2、Tomcat作为server时其名字一定不要含有空格和中文字符，否则会产生不可预料的后果
+
+3、eclipse中Tomcat的主配置文件对应于tomcat根目录下conf文件夹中的server.xml文件，但要注意有时主文件做的修改server.xml并不一定会跟着进行相应修改，需要clean一下此Tomcat
+或者找到server.xml直接对其进行修改
+
+4、在Tomcat配置时，一般将server locations设置为use Tomcat installation，deploy path设置为webapps
+
+5、不同的web应用一般都对应http的8080端口，这样如果同时开发几个不同的web应用又要用到Tomcat进行测试，需要为每个应用的Tomcat设置不一致的端口，否则会造成端口冲突。
+
+6、不同的web应用必须使用不同的tomcat进行测试，否则会造成不可预知的显示结果。
+
+7、对于规模较大的web应用来说，要将Tomcat的启动和关闭时间相应的设置长一些，为的是给web应用充分的时间启动，否则会因为启动时间超过规定的阈值而强制关闭。具体在
+Tomcat主配置文件的Timeouts下进行设置。
+
+8、java中extends和implements的区别，怎么用？
+一个是继承，一个是实现接口，继承这个可以理解为继承父类的方法，父类中的方法可以在子类中用到，super(),实现接口就是在接口中定义了方法，这个方法要你自己去实现，
+接口可以看作一个标准，比如定义了一个动物的接口，它里面有吃（eat()）这个方法，你就可以实现这个方法implements，这个方法是自己写，可以是吃苹果，吃梨子，香蕉，
+或者其他的。IMPLEMENTS就是具体实现这个接口。
+
+9、Java中abstract class和interface有什么区别？
+抽象类里面可以定义方法，也可以实现方法，interface只能定义；
+抽象类的的方法在子类中可以不实现，也可以重写父类的方法。 而接口中的所有方法一定要实现，不可遗漏。
+
+10、在eclipse中安装freemarker插件及html使用freemarker编辑器
+freemarker模板文件使用jboss tools下提供的FreeMarker IDE，在线安装的方法是：Help –> Install New Software 点击and，再出来的对话框中的Location中
+输入：http://download.jboss.org/jbosstools/updates/development/indigo/，name随便取一个即可。然后会列出来所有可用的插件，如果只需要安装FreeMarker IDE，
+可以在  JBoss Application Development 下找到并选中它，然后根据向导即可安装成功。
+退出Eclipse再重启，在window --> Preferences 左边的树形栏里出现FreeMarker Editor一项新的内容。在General --> Editors --> File Associations下，
+为*.html和*.htm文件添加（add）FreeMarker Editor 作他们关联的编辑器（associated editors) , *.ftl文件的默认编辑器就是FreeMarker Editor。
+这样在编辑混合有HTML和FreeMarker标记的文件时，可以选择右击文件 --> Open with HTML Editor 或者 Open with FreeMarker Editor
+
+11、在tomcat中的bin/catalina.bat下设置java虚拟机的内存
+rem ----- set jvm menery to solve "java.lang.OutOfMemoryError: PermGen space" problem ---------------------------------------
+set JAVA_OPTS=%JAVA_OPTS% -server -Xms768m -Xmx768m -XX:PermSize=128m -XX:MaxPermSize=256m -XX:NewSize=192m -XX:MaxNewSize=384m
+rem ----- Execute The Requested Command ---------------------------------------
+
+12、forticlient sslvpn是一个越过本集团局域网vpn代理访问外网的客户端程序，server address为：
+210.5.1.141，username:wuhecuizao，password:nc654321。如果不使用集团局域网，则不需要此工具就可直接访问数据库。
+
+13、jdk版本与项目紧密相关，jdk版本的不同会产生一系列的影响，从开发、测试到部署、运行都不一样。
+tomcat的版本也与java的jar包紧密相关，不同版本的tomcat有不同的jar包相关。
+
+14、从github上获取最新的文件版本使用命令为：git pull origin master
+
+15、在ssi框架中，entity对应于行业业务逻辑实体，dao对应于数据库操作类，service对应于spring中具体的业务逻辑实现（到方法层面），action对应于struts2中
+的逻辑层面（到类的层面）。struts中的事务管理是指web应用程序的事务管理，包含诸如访问页面、页面跳转、页面执行一些操作等；spring中的事务管理则是与行业相关
+业务逻辑管理，比如银行系统，指的是诸如查询储户余额、消费等行为控制；
+
+16、freemaker（url rewrite，即路径映射）
+
+17、quartz(时钟类库)
+
+18、lucene（文本处理库，可用于做搜索引擎）
+
+19、eclipse中有用的快捷键：ctrl+H用来搜索工程中的文件或文件中特定语句的；ctrl+F搜索文件中关键字的
+
+20、
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
