@@ -68,6 +68,27 @@ tomcat的版本也与java的jar包紧密相关，不同版本的tomcat有不同�
 19、eclipse中有用的快捷键：ctrl+H用来搜索工程中的文件或文件中特定语句的；ctrl+F搜索文件中关键字的
 
 20、$ git init
-    $ git add 网上资料查询.txt
+    $ git add 网上资料查询.txt（添加或修改文件）
     $ git commit -m "2015年休假南储实习"
     $ git push origin master（该步会输入github的用户名和密码）
+
+21、在eclipse中可直接拷贝本地文件paste至eclipse工程某一个文件夹下，文件位置为被eclipse自动放在工程相应目录下。
+
+22、eclipse可直接使用单元测试junit4，方法是右键工程选择bulid path 在选择add libreries，选择junit，在选择junit4。
+
+23、导入类名的快捷键为ctrl+shift+o，格式化代码ctrl+shift+f，复制下面一行ctrl+alt+下
+
+24、eclipse中单词匹配alt+.，类匹配alt+/
+
+25、在js中可使用console.info()来在浏览器审查元素的控制台输出相关变量的值
+
+26、eclipse调试模式中step into(F5)为单步进入，可以直接进入对应代码中；step out(F7)为单步跳出，从进入的代码跳出，回到上一层代码；
+step over(F6)单步执行，即一行代码一行代码地执行。
+
+27、Struts2和Spring集成有两种方案，是根据action的创建来划分的！
+方案一，Struts2负责流程，Spring负责对象的创建；Action由Struts2框架负责创建；Service由Spring框架负责创建。
+方案二，Struts2负责流程，Spring负责对象的创建，Action和Service都由Spring框架负责创建。这是常用的集成合并方案。
+步骤和上边的基本上一样，都是导入响应的jar包，拷入响应的配置文件，web.xml文件的写法也一样。
+南储商务网采用方案一进行设计，即Action由Struts2框架负责创建；Service由Spring框架负责创建。
+也就是entity（实体）、dao（数据查加删改由ibatis，此层可换成Herbernate）、service（由spring负责，完成行业业务逻辑实现）、
+action（struts负责，完成网站页面逻辑的事务管理）
