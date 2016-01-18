@@ -92,3 +92,39 @@ step over(F6)单步执行，即一行代码一行代码地执行。
 南储商务网采用方案一进行设计，即Action由Struts2框架负责创建；Service由Spring框架负责创建。
 也就是entity（实体）、dao（数据查加删改由ibatis，此层可换成Herbernate）、service（由spring负责，完成行业业务逻辑实现）、
 action（struts负责，完成网站页面逻辑的事务管理）
+
+28、hadoop Common(jar)是hadoop的核心，包括文件系统、远程调用RPC的序列函数。
+HDFS：提供高吞吐量的可靠分布式文件系统是GFS的开源实现。
+MapReduce：大型分布式数据处理模型，是Googlle MapReduce的开源实现。作用：映射/计算获取或是分析数据
+其他相关组成：
+Hbase：结构化分布式非关系型数据库。Big Table的开源实现。RDBMS
+Hive：提供摘要和查询功能的数据仓库。
+Cassandra：由facebook开发的分布式数据仓库。已捐献给apache。且apache已将cassandra应用到了各种云计算系统之中。
+
+29、中国大陆提供开源软件镜像服务的站点整理成列表:
+    网易开源镜像站：http://mirrors.163.com/
+    搜狐开源镜像站：http://mirrors.sohu.com/
+    浙江大学开源软件镜像站：http://mirrors.zju.edu.cn
+    北京理工大学开源软件镜像站：http://mirror.bit.edu.cn
+    华中科技大学开源软件镜像站：http://mirrors.hust.edu.cn/
+    中山大学开源软件镜像站：http://mirror.sysu.edu.cn/
+    大连理工大学开源软件镜像站：http://mirror.dlut.edu.cn/
+    北京交通大学开源镜像站：http://mirror.bjtu.edu.cn
+    兰州大学开源软件镜像站：http://mirror.lzu.edu.cn/
+    上海交通大学开源软件镜像站：http://ftp.sjtu.edu.cn/
+    清华大学开源软件镜像站：http://mirrors.tuna.tsinghua.edu.cn/
+    天津大学开源软件镜像站：http://mirror.tju.edu.cn/
+    中国科学技术大学开源软件镜像站：http://mirrors.ustc.edu.cn/
+    东北大学开源软件镜像站：http://mirror.neu.edu.cn/
+
+30、Apache官网相关资源：http://archive.apache.org/
+
+31、Google的Application Spot网站属于Paas层面的云应用。"翻墙"的原理是通过谷歌网页抓取技术，将一些特定网站抓取
+到谷歌服务器上再传至国内，从而使长城网失效。
+
+32、一般网站用户密码数据采用md5算法进行加密，如果数据库中直接改密码需将新密码md5加密后粘贴到数据库中。
+
+33、搜索引擎一般采用"倒排索引"技术，即把每个分词所涉及的网页进行搜集。这样输入单词直接定位到网页。
+
+34、Page Rank是Google的核心算法。根据连接关系来判断页面价值，连接数来判断页面价值。PageRank值高的指向目标网页
+和值低的指向他的价值也是不一样的。
