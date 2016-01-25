@@ -67,7 +67,8 @@ tomcat的版本也与java的jar包紧密相关，不同版本的tomcat有不同�
 
 19、eclipse中有用的快捷键：ctrl+H用来搜索工程中的文件或文件中特定语句的；ctrl+F搜索文件中关键字的
 
-20、$ git init
+20、使用git上传修改文件命令行步骤：
+    $ git init
     $ git add 网上资料查询.txt（添加或修改文件）
     $ git commit -m "2015年休假南储实习"
     $ git push origin master（该步会输入github的用户名和密码）
@@ -128,3 +129,21 @@ Cassandra：由facebook开发的分布式数据仓库。已捐献给apache。且
 
 34、Page Rank是Google的核心算法。根据连接关系来判断页面价值，连接数来判断页面价值。PageRank值高的指向目标网页
 和值低的指向他的价值也是不一样的。
+
+35、Git 命令行删除远程分支 
+查看
+git branch -a
+删除远程分支
+git branch -r -d origin/branch-name
+git push origin :branch-name
+
+36、Git鼓励大量使用分支：
+查看分支：git branch
+创建分支：git branch <name>
+切换分支：git checkout <name>
+创建+切换分支：git checkout -b <name>
+合并某分支到当前分支：git merge <name>
+删除分支：git branch -d <name>
+
+37、
+
