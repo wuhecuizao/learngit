@@ -129,7 +129,7 @@
                 $.ajax({
                     type: "post",
                     url: '${base}/ajaxVarietyChartsData.action',
-                    data: {"code": ${varietyCode} },
+                    data: {"code": ${varietyCode},"area":4 },
                     dataType: "json",
                     success: function (ajaxdata) {
                         if (ajaxdata) {
@@ -186,6 +186,9 @@
                     },
                     yAxis:[{
                         lineWidth : 0,
+						labels : {
+                            format : '{value:.,0f}'
+                        },
                         title:{
                             text : ''
                         }
@@ -355,6 +358,9 @@
                                     </#if>
                                 </tbody>
                             </table>
+                        </div>
+                        <div style="margin-top: 50px; text-align: center;">
+                            注：铜杆价格为当日南储电解铜报价的均价+当日铜杆加工费                      
                         </div>
                     </div>
 
@@ -835,7 +841,7 @@
         <div id="variety_one_right">
             <div id="variety_one_chart">
                 <div id="variety_one_chart_title">
-                    <div id="variety_one_chart_title_left"><a href="${base}/price/history/area=1;category=${commodityName};startDate=${beginDate};endDate=${endDate}" target="_blank" style="color: #005ac0;" >${varietyName}价走势图</a></div>
+                    <div id="variety_one_chart_title_left"><a href="${base}/price/history/area=4;category=${commodityName};startDate=${beginDate};endDate=${endDate}" target="_blank" style="color: #005ac0;" >${varietyName}价走势图</a></div>
                     <div id="clear"></div>
                 </div>
                 <div id="variety_one_chart_text">
@@ -1241,5 +1247,4 @@
     <#include "/WEB-INF/template/common/footer_2.0.ftl"/>
 
 	</body>
-</html>	
-
+</html>
