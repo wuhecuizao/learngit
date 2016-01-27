@@ -146,5 +146,20 @@ git push origin :branch-name
 合并某分支到当前分支：git merge <name>
 删除分支：git branch -d <name>
 
-37、
+37、将远程仓库与本地仓库关联
+git remote add  origin git@github.com:XXX/CCC.git
 
+38、将文件推送至github上master分支的方法，注意推送后还要将github上master的再fetch下来，与本地文件merge一下保持同步
+$ git add VarietyAction.java
+$ git commit -m "新增铜报价分页--铜加工材"
+$ git push origin master
+
+39、
+$ git pull origin master
+$ git branch
+$ git merge FETCH_HEAD
+
+40、192.168.11.10开发机
+    192.168.10.11生产环境
+
+41、git push单个文件时尽量用TortoiseGit，右键选择要push的文件单击“Git Commit -> Master”,然后添加推送注释，再push文件即可。
