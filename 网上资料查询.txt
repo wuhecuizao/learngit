@@ -163,3 +163,74 @@ $ git merge FETCH_HEAD
     192.168.10.11生产环境
 
 41、git push单个文件时尽量用TortoiseGit，右键选择要push的文件单击“Git Commit -> Master”,然后添加推送注释，再push文件即可。
+
+42、struts2工作原理:
+在Struts2框架中的处理大概分为以下几个步骤 
+1 客户端初始化一个指向Servlet容器（例如Tomcat）的请求 
+2 这个请求经过一系列的过滤器（Filter）（这些过滤器中有一个叫做ActionContextCleanUp的可选过滤器，这个过滤器对于Struts2和其他框架的集成很有帮助，例如：SiteMesh Plugin） 
+3 接着FilterDispatcher被调用，FilterDispatcher询问ActionMapper来决定这个请是否需要调用某个Action 
+4 如果ActionMapper决定需要调用某个Action，FilterDispatcher把请求的处理交给ActionProxy 
+5 ActionProxy通过Configuration Manager询问框架的配置文件，找到需要调用的Action类 
+6 ActionProxy创建一个ActionInvocation的实例。 
+7 ActionInvocation实例使用命名模式来调用，在调用Action的过程前后，涉及到相关拦截器（Intercepter）的调用。 
+8 一旦Action执行完毕，ActionInvocation负责根据struts.xml中的配置找到对应的返回结果。返回结果通常是（但不总是，也可 能是另外的一个Action链）一个需要被表示的JSP或者FreeMarker的模版。在表示的过程中可以使用Struts2 框架中继承的标签。在这个过程中需要涉及到ActionMapper
+
+43、struts2工作流程：
+1、客户端浏览器发出HTTP请求.
+2、根据web.xml配置，该请求被FilterDispatcher接收
+3、根据struts.xml配置，找到需要调用的Action类和方法， 并通过IoC方式，将值注入给Aciton
+4、Action调用业务逻辑组件处理业务逻辑，这一步包含表单验证。
+5、Action执行完毕，根据struts.xml中的配置找到对应的返回结果result，并跳转到相应页面
+6、返回HTTP响应到客户端浏览器
+
+44、南储商务网（2016.1.29）核心目前采用struts2+spring+ibatis的架构，其中Struts中的事物管理由struts负责，spring负责管理具体的业务逻辑事物。
+
+45、jQuery 选择器
+
+jQuery 元素选择器
+jQuery 使用 CSS 选择器来选取 HTML 元素。
+$("p") 选取 <p> 元素。
+$("p.intro") 选取所有 class="intro" 的 <p> 元素。
+$("p#demo") 选取所有 id="demo" 的 <p> 元素。
+
+jQuery 属性选择器
+jQuery 使用 XPath 表达式来选择带有给定属性的元素。
+$("[href]") 选取所有带有 href 属性的元素。
+$("[href='#']") 选取所有带有 href 值等于 "#" 的元素。
+$("[href!='#']") 选取所有带有 href 值不等于 "#" 的元素。
+$("[href$='.jpg']") 选取所有 href 值以 ".jpg" 结尾的元素。
+
+jQuery CSS 选择器
+jQuery CSS 选择器可用于改变 HTML 元素的 CSS 属性。
+下面的例子把所有 p 元素的背景颜色更改为红色：
+$("p").css("background-color","red");
+
+更多的选择器实例
+语法 	描述
+$(this) 	              当前 HTML 元素
+$("p") 	                  所有 <p> 元素
+$("p.intro") 	          所有 class="intro" 的 <p> 元素
+$(".intro") 	          所有 class="intro" 的元素
+$("#intro") 	          id="intro" 的元素
+$("ul li:first") 	      每个 <ul> 的第一个 <li> 元素
+$("[href$='.jpg']") 	  所有带有以 ".jpg" 结尾的属性值的 href 属性
+$("div#intro .head") 	  id="intro" 的 <div> 元素中的所有 class="head" 的元素
+
+46、AJAX 是一种在无需重新加载整个网页的情况下，能够更新部分网页的技术。
+
+47、linux将node.js加入环境变量的方法：export PATH=/home/hadoop/wuhe/node-v5.3.0-linux-x86/bin:$PATH
+
+48、express 4.X在linux安装代码
+$ npm install -g express-generator --save
+$ express /tmp/foo && cd /tmp/foo
+$ npm install
+$ npm start
+
+49、centos使用下述命令安装git
+$ yum install git
+
+50、中央军委纪委公开举报电话信箱
+    举报方式
+　　专线电话：010—66791234(地方线)、0201—791234(军线)
+　　专线手机：15311021234、15311031234
+　　专用信箱：北京市100120信箱02分箱(邮政编码：100120)
